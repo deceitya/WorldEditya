@@ -1,0 +1,27 @@
+{
+    "command": {
+        "set": {
+            "usage": "//set <id[:meta]>",
+            "description": "選択した範囲内を指定したブロックで埋めます。",
+            "nopos": "座標が設定されていません。"
+        },
+        "pos1": {
+            "usage": "//pos1",
+            "description": "1つ目の座標を設定します。"
+        },
+        "pos2": {
+            "usage": "//pos2",
+            "description": "2つ目の座標を設定します。"
+        }
+    },
+    "selection": {
+        "set1": "1つ目の座標を設定しました。(x=%1, y=%2, z=%3) (%4ブロック)",
+        "set2": "2つ目の座標を設定しました。(x=%1, y=%2, z=%3) (%4ブロック)"
+    },
+    "function": {
+        "set": {
+            "start": "%1 が //set を実行します。",
+            "completed": "%1 の //set が終了しました。"
+        }
+    }
+}

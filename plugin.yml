@@ -1,0 +1,8 @@
+name: WorldEditya
+main: Deceitya\WorldEditya\Main
+version: 1.0.0
+api: 3.11.3
+load: POSTWORLD
+author: deceitya
+description: わーるどえでぃちゃ（かわいい）
+website: https://github.com/deceitya/WorldEditya
