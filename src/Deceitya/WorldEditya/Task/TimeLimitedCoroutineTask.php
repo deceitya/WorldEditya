@@ -2,7 +2,6 @@
 namespace Deceitya\WorldEditya\Task;
 
 use pocketmine\scheduler\Task;
-use Deceitya\WorldEditya\WorldEdityaConfig;
 
 class TimeLimitedCoroutineTask extends Task
 {
@@ -11,10 +10,10 @@ class TimeLimitedCoroutineTask extends Task
     /** @var float */
     private $limit;
 
-    public function __construct(\Generator $generator)
+    public function __construct(\Generator $generator, float $limit)
     {
         $this->generator = $generator;
-        $this->limit = WorldEdityaConfig::getLimitSeconds();
+        $this->limit = $this->limit;
     }
 
     public function onRun(int $currentTick)

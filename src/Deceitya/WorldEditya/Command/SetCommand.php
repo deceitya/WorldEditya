@@ -56,7 +56,10 @@ class SetCommand extends PluginCommand
         $pos2 = $selection->getPos2();
         if ($pos1 instanceof Position && $pos2 instanceof Position) {
             $function = new SetFunction($sender, $pos1, $pos2, BlockFactory::get((int) $data[0], (int) $data[1]));
-            $this->getPlugin()->getScheduler()->scheduleRepeatingTask(new TimeLimitedCoroutineTask($function->execute()), WorldEdityaConfig::getCooltimeTick());
+            $this->getPlugin()->getScheduler()->scheduleRepeatingTask(
+                new TimeLimitedCoroutineTask($function->execute(), WorldEdityaConfig::getLimitSeconds()),
+                WorldEdityaConfig::getCooltimeTick()
+            );
             return true;
         } else {
             $sender->sendMessage(TextContainer::get('command.set.nopos'));
